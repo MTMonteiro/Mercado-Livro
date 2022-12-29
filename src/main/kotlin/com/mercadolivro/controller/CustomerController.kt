@@ -1,5 +1,6 @@
 package com.mercadolivro.controller
 
+import com.mercadolivro.model.CustomerModel
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -10,13 +11,9 @@ import org.springframework.web.bind.annotation.RestController
 class CustomerController {
 
     @GetMapping
-    fun helloWorld(): String {
-        return "customer 1"
+    fun getCustomer(): CustomerModel {
+        return CustomerModel("1", "Matheus", "emai@qw.com")
     }
 
-    //sub path
-    @GetMapping("/2")
-    fun customer2(): String {
-        return "customer 2"
-    }
+
 }
